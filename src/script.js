@@ -118,23 +118,21 @@ function endGame() {
         snakeY < 0 || snakeY >= rows * blockSize) {
         gameOver = true;
         alert("Game Over");
-        document.getElementById("restart-game").style.display = "inline-block"; // Show restart button
-        clearInterval(gameInterval); // Stop the game loop
-        return;
+        document.getElementById("restart-game").style.display = "inline-block"; 
+        clearInterval(gameInterval);
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX === snakeBody[i][0] && snakeY === snakeBody[i][1]) {
             gameOver = true;
             alert("Game Over");
-            document.getElementById("restart-game").style.display = "inline-block"; // Show restart button
-            clearInterval(gameInterval); // Stop the game loop
-            return;
+            document.getElementById("restart-game").style.display = "inline-block"; 
+            clearInterval(gameInterval);
         }
     }
 }
 
 function restartGame() {
-    clearInterval(gameInterval); // Clear the existing game loop
-    letsDoThis(); // Restart the game by calling letsDoThis
+    clearInterval(gameInterval); 
+    letsDoThis();
 }
